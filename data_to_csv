@@ -13,7 +13,7 @@ import csv
 ##########################################################################
 #   Shorts for filename an test definition name
 ##########################################################################
-data_file_path = "C:/Users/jakob/KTH/KEXjob/Communication/data/"            # change manually
+data_file_path = "YOURFILEPATH"            # change manually
 
 data_file = "_rgb_data.txt"
 red_file = "_red_data_clean.txt"
