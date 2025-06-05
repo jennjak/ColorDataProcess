@@ -1,12 +1,14 @@
-#Duty cycle: 25%, f= 1k Hz, fs = 4 kHz
+""" Using ADC to retrieve sensor data and converts it into a range in [0,255].
+Data is locally stored in list and sent in specific intervalls
+to the computer via UART, using the print function."""
 
 from machine import Pin, ADC, PWM, Timer	#import pin and adc class
 import time
 from picozero import pico_led
 
-pin_28 = Pin(28, Pin.IN)
+pin_27 = Pin(27, Pin.IN)
 
-light_color = ADC(pin_28)
+light_color = ADC(pin_27)
 
 led_red = PWM(Pin(21, Pin.OUT))
 led_green = PWM(Pin(20, Pin.OUT))
@@ -45,7 +47,6 @@ DUTY_CYCLE = 16383 # approx 25%
 led_red.duty_u16(0)
 led_green.duty_u16(0)
 led_blue.duty_u16(0)
-
 
 def ReadColor(timer):
     global value_color
@@ -105,7 +106,7 @@ def LedSM1(timer):
     
     state_led = nextstate_led
     
-# includes more colur, yellow, white, purple and cyan
+# Includes more colour, yellow, white, purple and cyan
 def LedSM2(timer):
     global state_led3
     global nextstate_led3
