@@ -1,10 +1,10 @@
 # Retrieve and handle data from ARD readings
 
-red_data = open("C:/Users/jakob/KTH/KEXjob/Communication/data/t8_red_data_clean.txt", "r")
+red_data = open("C:/your file path/t8_red_data_clean.txt", "r")
 
-green_data = open("C:/Users/jakob/KTH/KEXjob/Communication/data/t8_green_data_clean.txt", "r")
+green_data = open("C:/your file path/t8_green_data_clean.txt", "r")
 
-blue_data = open("C:/Users/jakob/KTH/KEXjob/Communication/data/t8_blue_data_clean.txt", "r")
+blue_data = open("C:/your file path/t8_blue_data_clean.txt", "r")
 
 red = []
 green = []
